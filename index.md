@@ -29,7 +29,6 @@
     <!--end Search Bar-->
     <div class="square"></div>
     <section class="homepage">
-
         <nav>
             <h1 class="sliding-text">Precede offical opening <br> to your favorite movie </h1>
             <ul>
@@ -44,7 +43,6 @@
         </nav>
         <h1 class="logo"> preView </h1>
     </section>
-
     <section class="first-page">
         <div class="intro">
             <h2>Movie & TV Trailers</h2>
@@ -57,7 +55,6 @@
         </div>
         <img src="./image/leaf.jpg" alt="">
     </section>
-
     <section class="first-page">
         <img src="./image/green.jpg" alt="">
         <div class="intro">
@@ -65,8 +62,6 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
     </section>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
