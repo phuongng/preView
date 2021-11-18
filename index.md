@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -67,6 +67,10 @@
     </section>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
 </body>
 
 <footer class="footer">
@@ -93,6 +97,13 @@
                         </ul>
                     </div>
                 </div>
+                <ul class="nav">
+                    <li class="nav-item"> <a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg" title="Facebook"></i></a></li>
+                    <li class="nav-item"> <a href="" class="nav-link"><i class="fa fa-twitter fa-lg" title="twitter"></i></a></li>
+                    <li class="nav-item"> <a href="" class="nav-link"><i class="fa fa-github fa-lg" title="github"></i></a></li>
+                    <li class="nav-item"> <a href="" class="nav-link"><i class="fa fa-instagram fa-lg" title="instagram"></i></a></li>
+                </ul>
+                <br>
             </div>
             <div class="col-md-2">
                 <h5 class="text-md-right">Contact Us</h5>
