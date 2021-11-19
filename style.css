@@ -5,9 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'EB Garamond', serif;
-}
+body {}
 
 nav {
     display: flex;
