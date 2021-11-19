@@ -18,8 +18,7 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-
-- name: exec-javascript-diagnostic
+- name: exec-javascriptdiagnostic
   # You may pin to the exact commit or the version.
   # uses: steiley/exec-javascript-diagnostic@edceb50f9c067ee6183592d83fd802c728703a26
   uses: steiley/exec-javascript-diagnostic@v0.0.2
