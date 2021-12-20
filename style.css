@@ -49,20 +49,43 @@ a {
     transform: translate(-50%, -50%) scale(6);
 }
 
-.video {
-    margin-top: 15rem;
-    width: 100px;
-    z-index: 1;
+
+/* video */
+
+.container .popup-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
 }
 
-.video button {
-    height: 10px;
-    z-index: 2;
-    margin-left: 10rem;
-    color: white;
-    background-color: none;
-    position: relative;
+.container .popup-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 5px;
+    border: 3px solid white;
+    object-fit: cover;
 }
+
+.container .popup-video span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+    font-weight: border;
+    z-index: 100;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+/* end video */
 
 .homepage {
     height: 100vh;
@@ -80,8 +103,8 @@ a {
 
 .first-page {
     height: 100vh;
-    background: rgb(21, 21, 21);
-    color: white;
+    background: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: space-around;
