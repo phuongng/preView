@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.preVIEW;
-import preview.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -18,7 +22,6 @@ public class preVIEW_GUI extends javax.swing.JFrame {
      */
     protected String genre = " ";
     protected String title = " ";
-    protected PreVIEW prev = new PreVIEW();
     
     public preVIEW_GUI() {
         initComponents();
@@ -79,12 +82,9 @@ public class preVIEW_GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -93,8 +93,11 @@ public class preVIEW_GUI extends javax.swing.JFrame {
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGap(113, 113, 113))
+                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,12 +127,17 @@ public class preVIEW_GUI extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        genre = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
+         genre = (String) jComboBox1.getSelectedItem();
+             
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jTextArea1.setText("Movie: " + title);
+        jTextField1ActionPerformed(evt);
+        jComboBox1ActionPerformed(evt);
+        jTextArea1.setText(title+ "\n");
+        jTextArea1.append("All\t" + " | Men\t" + " | Women\t\n");
+        jTextArea1.append(predict(genre));
     }//GEN-LAST:event_jButton1ActionPerformed
     
     /**
@@ -176,4 +184,27 @@ public class preVIEW_GUI extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+  public static String predict(String genre) {
+    String output = " ";
+    final String ID = "admin";
+    final String PW = "11oveCookie$";
+    final String SERVER = "jdbc:mysql://studentdatabase.c7whb4kqcku6.us-east-1.rds.amazonaws.com:3306/mywebapp";
+    String querys;
+    try {
+        Connection con = DriverManager.getConnection(SERVER, ID, PW);
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT round(avg(allrating), 1) as allrating, round(avg(mrating), "
+                + "1) as mrating, round(avg(frating), 1) as frating FROM mywebapp.movies where genre = '" + genre + "' ;");
+        while (rs.next()){
+            String allrating = rs.getString("allrating");
+            String mrating = rs.getString("mrating");
+            String frating = rs.getString("frating");
+            output = allrating+"\t |" +  mrating+ "\t |" + frating;
+            
+        } return output;
+    }catch (SQLException e){
+        return e.toString();
+    }
+ }
 }
