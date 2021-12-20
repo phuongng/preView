@@ -30,7 +30,8 @@
     <div class="square"></div>
     <section class="homepage">
         <nav>
-            <h1 class="sliding-text">Precede offical opening <br> to your favorite movie </h1>
+            <h1 class="sliding-text">Preceding the official trailer
+                <br> of your favorite movie </h1>
             <ul>
                 <li>
                     <a href="Movies.html"> Movies</a>
@@ -44,26 +45,31 @@
             </h1>
         </nav>
     </section>
-    <section class="first-page">
+    <!--play video-->
+    <div class="container">
+        <div class="popup-video">
+            <span>&times; </span>
+            <video src="./image/logo-video.mp4" autoplay controls></video>
 
-        <div class="intro">
-            <h2>Movie & TV Trailers</h2>
-            <ul class="menu-bar">
-                <li>Trending Trailer</li>
-                <li>Most Anticipated</li>
-                <li>Most Popular</li>
-                <li>Recently Added</li>
-            </ul>
         </div>
-        <img src="./image/movie trailer.jpg" alt="homepage1">
-    </section>
-    <section class="first-page">
-        <img src="./image/movie trailer 2.jpg" alt="homepage1">
-        <div class="intro">
-            <h2>Top 10 Movies</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-    </section>
+    </div>
+    <script>
+        document.querySelectorAll('.video-container video').forEach(vid => {
+            vid.onclick = () => {
+                document.querySelector('.popup-video').style.display = 'block';
+                document.querySelector('.popup-video video').src = vid.getAttribute('src')
+            }
+
+        });
+
+        document.querySelector('.popup-video span').onclick = () => {
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+    </script>
+    <!--end play video-->
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous"></script>
     <script src="app.js"></script>
