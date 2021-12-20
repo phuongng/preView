@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.preVIEW;
+import preview.*;
 
 /**
  *
@@ -15,6 +16,9 @@ public class preVIEW_GUI extends javax.swing.JFrame {
     /**
      * Creates new form preVIEW_GUI
      */
+    protected String genre = " ";
+    protected String title = " ";
+    protected PreVIEW prev = new PreVIEW();
     
     public preVIEW_GUI() {
         initComponents();
@@ -58,6 +62,7 @@ public class preVIEW_GUI extends javax.swing.JFrame {
 
         jLabel2.setText("Genre");
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
@@ -114,17 +119,17 @@ public class preVIEW_GUI extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        String title = jTextField1.getText();
+        title = jTextField1.getText();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        String genre = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
+        genre = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-     
+        jTextArea1.setText("Movie: " + title);
     }//GEN-LAST:event_jButton1ActionPerformed
     
     /**
