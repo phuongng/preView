@@ -56,6 +56,23 @@ a {
     padding-top: 1px;
 }
 
+.homepage a.hover-text:hover,
+.homepage a.hover-text:active {
+    font-size: 150%;
+    color: rgb(230, 230, 33);
+}
+
+a.hover-text:hover,
+a.hover-text:active {
+    font-size: 150%;
+    color: rgb(230, 230, 33);
+}
+
+a.hover:hover,
+a.hover:active {
+    color: rgb(230, 230, 33);
+}
+
 
 /* video */
 
