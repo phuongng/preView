@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Slideshow.css">
+    <link rel="stylesheet" href="fontawesome.css">
+    <link rel="stylesheet" href="searchbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <title>Coming Soon </title>
+</head>
+
+<body>
+    <!--Search Bar-->
+    <nav class="top-menu">
+        <ul>
+            <li> <i class="fa-regular fa-search"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
+            <li>
+                <a href="Watchlist.html"> <i class="far fa-bookmark"></i> Watchlist</a>
+            </li>
+            <li><a href="Sign In.html"> Sign In</a></li>
+            <!--Search Bar <script src="./app.js"></script> -->
+        </ul>
+    </nav>
+    <!--end Search Bar-->
+
+    <section>
+        <nav>
+            <img class="small-logo" src="./image/logo.svg">
+
+            <ul>
+                <li>
+                    <a href="index.html"> Home</a>
+                    <a href="Movies.html"> Movies</a>
+                    <a href="In theaters.html"> In Theaters </a>
+                    <a href="Coming Soon.html"> Coming Soon</a>
+                    <a href="TV Shows.html"> TV Shows</a>
+                    <a href="./Jar/preVIEW.jar">Download</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="./Picture/Jackass Forever.jpg" style="width:100%">
+            <div class="text">Jackass Forever</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Moonfall.jpeg" style="width:100%">
+            <div class="text">Moonfall</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Operation Fortune.jpeg" style="width:100%">
+            <div class="text">Operation Fortune</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Redeeming Love.jpeg" style="width:100%">
+            <div class="text">Redeeming Love</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Marry Me.jpeg" style="width:100%">
+            <div class="text">Marry Me</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <script src="Slideshow.js"></script>
+
+    <div class="movie-container">
+        <h3>Coming soon to theaters (US)</h3>
+        <p>Trailers for upcoming release</p>
+
+        <div class="video-container">
+            <div class="movie-title">
+                <div class="video"><video src="./video/Cyrano.mp4" muted></video></div>
+                <h4><b>Cyrano</b></h4>
+                <p>2021 &#183; PG &#183; 2h04m </p>
+                <div class="imdbRatingPlugin" data-user="ur144175790" data-title="tt6264654" data-style="p1">
+                    <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </div>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/The 355.mp4" muted></video></div>
+                <h4><b>The 355</b></h4>
+                <p>2022 &#183; PG-13 </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872603" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/Jackass Forever.mp4" muted></video></div>
+                <h4><b>Jackass Forever</b></h4>
+                <p>2022 &#183; R &#183; 1h36m </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt108726003" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/  Moonfall (2022).mp4" muted></video></div>
+                <h4><b>Moonfall</b></h4>
+                <p>2022 &#183; 2h </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872604" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/  Operation Fortune- Ruse de guerre (2022).mp4" muted></video></div>
+                <h4><b> Operation Fortune: Ruse de guerre </b></h4>
+                <p>2022 </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Belle.mp4" muted></video></div>
+                <h4><b>Belle</b></h4>
+                <p>2021 &#183; PG &#183; 2h01m </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="0tt10872606" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Death on the Nile.mp4" muted></video></div>
+                <h4><b> Death on the Nile</b></h4>
+                <p>2022 </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Redeeming Love.mp4" muted></video></div>
+                <h4><b> Redeeming Love </b></h4>
+                <p>2021 &#183; PG-13 </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Sesame Street.mp4" muted></video></div>
+                <h4><b> Sesame Street </b></h4>
+                <p>2022 </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/The King's Daughter.mp4" muted></video></div>
+                <h4><b>The King's Daughter</b></h4>
+                <p>2022 &#183; PG &#183; 1h30m </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Dog.mp4" muted></video></div>
+                <h4><b>Dog</b></h4>
+                <p>2022 &#183; PG-13 &#183; 1h30m </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2382320" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/  Uncharted.mp4" muted></video></div>
+                <h4><b>Uncharted</b></h4>
+                <p>2022 </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872600" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                </span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5><i class="fa fa-road"></i> <img src="./image/preView.png"></h5>
+                <div class="row" id="footer-list">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Help</a></li>
+                            <li><a href="">Condition of Use</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Legal Terms</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Contact Us</h5>
+
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group text-xs-right">
+                        <button type="button">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

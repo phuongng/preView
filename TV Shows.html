@@ -1,383 +1,295 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Menu Bar.css">
-    <title>TV Shows</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Slideshow.css">
+    <link rel="stylesheet" href="fontawesome.css">
+    <link rel="stylesheet" href="searchbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <title>TV Shows </title>
+    <script>(function (d, s, id) { var js, stags = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"; stags.parentNode.insertBefore(js, stags); })(document, "script", "imdb-rating-api");</script>
+    <style>
+        a.imdbLink {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
-<div class="Banner">
-    <h1>TV Shows!</h1>
-</div>
-<div class="grid-container">
-    <div class="item item-1">
-        <img src="./image/BreakingBad.jpg">
+    <!--Search Bar-->
+    <nav class="top-menu">
+        <ul>
+            <li> <i class="fa-regular fa-search"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
+            <li>
+                <a href="Watchlist.html"> <i class="far fa-bookmark"></i> Watchlist</a>
+            </li>
+            <li><a href="Sign In.html"> Sign In</a></li>
+            <!--Search Bar <script src="./app.js"></script> -->
+        </ul>
+    </nav>
+    <!--end Search Bar-->
+
+    <section>
+        <nav>
+            <img class="small-logo" src="./image/logo.svg">
+
+            <ul>
+                <li>
+                    <a href="index.html"> Home</a>
+                    <a href="Movies.html"> Movies</a>
+                    <a href="In theaters.html"> In Theaters </a>
+                    <a href="Coming Soon.html"> Coming Soon</a>
+                    <a href="TV Shows.html"> TV Shows</a>
+                    <a href="./Jar/preVIEW.jar">Download</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="./Picture/the shrink next door.jpeg" style="width:100%">
+            <div class="text">The Shrink Next Door</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Mayor of Kingstown.jpeg" style="width:100%">
+            <div class="text">Major of Kingstown</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Sing 2.jpg" style="width:100%">
+            <div class="text">Sing 2</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/landscapers.jpeg" style="width:100%">
+            <div class="text">Lanscapers</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./Picture/Dopesick.png" style="width:100%">
+            <div class="text">Dopesick</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-    <div class="item item-2">
-        <img src="./image/TheBlacklist.jpg">
-    </div>
+    <script src="Slideshow.js"></script>
 
-    <div class="item item-3">
-        <img src="./image/Succession.jpg">
-    </div>
+    <div class="movie-container">
+        <h3>Most Popular TV Shows</h3>
+        <p>Sort by: Release Date</p>
 
-    <div class="item item-4">
-        <img src="./image/SouthPark.jpg">
-    </div>
+        <div class="video-container">
 
-    <div class="item item-5">
-        <img src="./image/SquidGame.jpg">
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/1883.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>1883</b></h4>
+                <p>TV Series &#183; 2021- </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt13991232" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt13991232/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" 1883 (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-6">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0903747" data-style="p1">
-            <a href="https://www.imdb.com/title/tt0903747/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
-            </a>
-        </span>
-            <script>(function(d,s,id){
-                var js,stags=d.getElementsByTagName(s)[0];
-                if(d.getElementById(id)){return;}
-                js=d.createElement(s);
-                js.id=id;
-                js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-                stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-                </script>
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/Station Eleven.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>Station Eleven</b></h4>
+                <p>TV Mini Series &#183; 2021-2022 &#183; TV-MA &#183; 45m </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10574236" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt10574236/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Station Eleven (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/Macgruber.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>MacGruber</b></h4>
+                <p>TV Series &#183; 2021 &#183; TV-MA &#183; 30m </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11621710" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt11621710/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" MacGruber (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/just like that.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>And Just Like That</b></h4>
+                <p>TV Mini Series &#183; 2021 &#183; TV-MA </p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt13819960" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt13819960/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" And Just Like That (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-7">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2741602" data-style="p1">
-            <a href="https://www.imdb.com/title/tt2741602/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The Blacklist(2013) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){
-            var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-            js=d.createElement(s);
-            js.id=id;
-            js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-            stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-            </script>
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/landscapers.mp4" onclick="this.play()" muted></video></div>
+                <h4><b> Landscapers </b></h4>
+                <p>TV Mini Series &#183; 2021 &#183; TV-MA &#183; 3h13m</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11471892" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt11471892/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Lanscapers (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-8">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt7660850" data-style="p1">
-            <a href="https://www.imdb.com/title/tt7660850/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Succession(2018) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/The Beatles- Get Back.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>The Beatles: Get Back</b></h4>
+                <p>TV Mini Series &#183; 2021 &#183; TV-14 &#183; 7h48m</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9735318" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt9735318/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The Beatles: Get Back (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-9">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0121955" data-style="p1">
-            <a href="https://www.imdb.com/title/tt0121955/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" South Park(1997) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/True Story.mp4" onclick="this.play()" muted></video></div>
+                <h4><b> True Story </b></h4>
+                <p>TV Mini Series &#183; 2021 &#183; TV-MA &#183; 4h20m</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt13655456" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt13655456/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" True Story (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-10">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10919420" data-style="p1">
-            <a href="https://www.imdb.com/title/tt10919420/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Squid Game(2021) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/Cowboy Bebop.mp4" onclick="this.play()" muted></video></div>
+                <h4><b> Cowboy Bebop  </b></h4>
+                <p>TV Series &#183; 2021 &#183; TV-MA &#183; 58m</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt1267295" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt1267295/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Cowboy Bebop (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-11">
+            <div class="movie-title">
+                <div class="video"><video src="./video/Yellowjackets.mp4" onclick="this.play()" muted></video></div>
+                <h4><b> Yellowjackets </b></h4>
+                <p>TV Series &#183; 2021- &#183; TV-MA</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11041332" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt11041332/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Yellowjackets (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/Mayor of Kingstown.mp4" onclick="this.play()" muted></video></div>
+                <h4><b> Mayor of Kingstown </b></h4>
+                <p>TV Series &#183; 2021- &#183; TV-MA</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11712058" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt11712058/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Mayor of Kingstown (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-12">
+            <div class="movie-title">
+                <div class="video"><video src="./video/the shrink next door.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>The Shrink Next Door</b></h4>
+                <p>TV Series &#183; 2021- &#183; TV-MA &#183; 5h41m</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11947248" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt11947248/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The Shrink Next Door (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    </div>
+            <div class="movie-title">
+                <div class="video"><video src="./video/Dopesick.mp4" onclick="this.play()" muted></video></div>
+                <h4><b>Dopesick</b></h4>
+                <p>TV Mini Series &#183; 2021 &#183; TV-MA &#183; 1h</p>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9174558" data-style="p1">
+                    <a class="imdbLink" href="https://www.imdb.com/title/tt9174558/">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Dopesick (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
 
-    <div class="item item-13">
-
-    </div>
-
-    <div class="item item-14">
-
-    </div>
-
-    <div class="item item-15">
-
-    </div>
-
-    <div class="item item-16">
-        <img src="./image/GameOfThrones.jpg">
-    </div>
-
-    <div class="item item-17">
-        <img src="./image/TheOffice.jpg">
-    </div>
-
-    <div class="item item-18">
-        <img src="./image/PeakyBlinders.jpg">
-    </div>
-
-    <div class="item item-19">
-        <img src="./image/Shameless.jpg">
-    </div>
-
-    <div class="item item-20">
-        <img src="./image/IASIP.jpg">
-    </div>
-
-    <div class="item item-21">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0944947" data-style="p1">
-            <a href="https://www.imdb.com/title/tt0944947/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Game of Thrones(2011) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
-
-    <div class="item item-22">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0386676" data-style="p1">
-            <a href="https://www.imdb.com/title/tt0386676/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The Office(2005) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
-
-    <div class="item item-23">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2442560" data-style="p1">
-            <a href="https://www.imdb.com/title/tt2442560/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Peaky Blinders(2013) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
-
-    <div class="item item-24">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt1586680" data-style="p1">
-            <a href="https://www.imdb.com/title/tt1586680/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Shameless(2011) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
-
-    <div class="item item-25">
-        <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0472954" data-style="p1">
-            <a href="https://www.imdb.com/title/tt0472954/?ref_=plg_rt_1">
-                <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" It's Always Sunny in Philadelphia(2005) on IMDb" />
-            </a>
-        </span>
-        <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
-        js=d.createElement(s);
-        js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-        stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");
-        </script>
-    </div>
+        </div>
     </div>
 </body>
 
-<style>
-    * {
-        background-color: #f1f0f1;
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5><i class="fa fa-road"></i> <img src="./image/preView.png"></h5>
+                <div class="row" id="footer-list">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Help</a></li>
+                            <li><a href="">Condition of Use</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Legal Terms</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Contact Us</h5>
 
-    }
-    body {
-        overflow-x: hidden;
-    }
-    .Banner {
-        position: absolute;
-        top: 5%;
-        right: 50%;
-        background-color: transparent;
-        width: 750px;
-        height: 150px;
-        z-index: 4;
-    }
-    .Banner h1{
-        position: inherit;
-        color: black;
-        font-size: 13vh;
-        font-family: "Brush Script MT", serif;
-    }
-    .grid-container {
-        display: grid;
-        position: absolute;
-        object-fit: cover;
-        top: 40%;
-        left: 1%;
-        width: 100%;
-        z-index: 5;
-        grid-gap: 30px 10px;
-        grid-template-columns: [first] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20% [end];
-        grid-template-rows: [row1-start] 30% [row1-end] 15% [third-line] 10% [fourth-line] 30% [fifth-line] 15% [last-line];
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group text-xs-right">
+                        <button type="button">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    }
-    .item-1{
-        align-self: center;
-        z-index: inherit;
-        object-fit: scale-down;
-        background-color: green;
-    }
-    .item-1 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-
-    .item-2{
-        align-self: center;
-        z-index: inherit;
-        object-fit: scale-down;
-        background-color: crimson;
-    }
-    .item-2 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-    .item-3{
-        align-self: center;
-        z-index: inherit;
-        object-fit: scale-down;
-        background-color: #6f4e37;
-    }
-    .item-3 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-    .item-4{
-        align-self: center;
-        z-index: inherit;
-        object-fit: scale-down;
-        background-color: skyblue;
-    }
-    .item-4 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-    .item-5{
-        align-self: center;
-        z-index: inherit;
-        object-fit: scale-down;
-        background-color: pink;
-    }
-    .item-5 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-
-    .item-21{
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 5;
-        grid-row-end: 6;
-    }
-    .item-16{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-rows-start: 3;
-        grid-rows-end: 4;
-        align-self: center;
-        z-index: inherit;
-        object-fir: scale-down;
-        background-color: steelblue;
-    }
-    .item-16 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-    .item-17{
-        align-self: center;
-        z-index: inherit;
-        object-fir: scale-down;
-        background-color: slategrey;
-    }
-    .item-17 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-
-    .item-18{
-        align-self: center;
-        z-index: inherit;
-        object-fir: scale-down;
-        background-color: #696969;
-    }
-    .item-18 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-
-    .item-19{
-        align-self: center;
-        z-index: inherit;
-        object-fir: scale-down;
-        background-color: skyblue;
-    }
-    .item-19 img{
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-
-    .item-20{
-        align-self: center;
-        z-index: inherit;
-        object-fir: scale-down;
-        background-color: yellow;
-    }
-    .item-20 img {
-        width: 200px;
-        height: 300px;
-        object-fit: contain;
-    }
-
-
-</style>
 </html>
