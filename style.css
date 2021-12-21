@@ -134,6 +134,7 @@ a {
 
 .movie-container .video-container .movie-title p {
     padding-top: 10px;
+    margin-left: 30px;
 }
 
 .movie-container .video-container .movie-title .imdbRatingPlugin {
