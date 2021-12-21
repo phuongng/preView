@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome.css">
     <link rel="stylesheet" href="searchbar.css">
+    <link rel="stylesheet" href="modal-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" crossorigin="anonymous">
@@ -18,211 +19,299 @@
 </head>
 
 <body>
-    <!--Search Bar-->
-    <nav class="top-menu">
+        <!--  login and sign up buttons-->
         <ul>
-            <li> <i class="fa-regular fa-search"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
             <li>
-                <a href="Watchlist.html"> <i class="far fa-bookmark"></i> Watchlist</a>
+                <button onclick="document.getElementById('login').style.display='block'" style="width:100px;">Login</button>
+
+                <div id="login" class="modal">
+
+                    <form class="modal-content animate" action="./signed-in-index.html" method="post" style="height: 50%; width: 30%">
+                        <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                        <div class="container" style="">
+                            <h1>Login</h1>
+                            <p>Enter your username and password below...</p>
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <br />
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember Me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+
+                        <button type="button" class="cancelbtn" onclick="document.getElementById('login').style.display='none'">Cancel</button>
+
+                        </div>
+                        <div class="container">
+
+                            <p>Don't have an account ?</p>
+                            <button type="button" onclick="document.getElementById('signup').style.display = 'block'; document.getElementById('login').style.display='none'" class="signupbtn" style="background-color:#800080">Sign Up</button>
+
+                        </div>
+                    </form>
+                </div>
             </li>
-            <li><a href="Sign In.html"> Sign In</a></li>
-            <!--Search Bar <script src="./app.js"></script> -->
+
+
+
+
+
+            <li>
+                <button onclick="document.getElementById('signup').style.display='block'" style="width:100px; background-color:#800080;">Sign Up</button>
+
+                <div id="signup" class="modal">
+                    <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content animate" action="./signed-in-index.html" method="post" style="height: 50%; width: 30%">
+                        <div class="container">
+                            <h1>Sign Up</h1>
+                            <p>Please fill in this form to create an account.</p>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <br />
+
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+                            <br />
+
+                            <label for="password-repeat"><b>Repeat Password</b></label>
+                            <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+
+                            <div class="container" style="background-color:#f1f1f1">
+
+                                <button type="button" class="cancelbtn" onclick="document.getElementById('signup').style.display='none'">Cancel</button>
+
+                            </div>
+                            <div class="clearfix">
+
+                                <button type="submit" class="signupbtn">Create Account</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
         </ul>
-    </nav>
-    <!--end Search Bar-->
-    <div class="square"></div>
-    <section class="homepage">
-        <nav>
-            <h1 class="sliding-text">Preceding the official trailer
-                <br> of your favorite movie </h1>
+
+
+
+
+
+
+        <!--Search Bar-->
+        <nav class="top-menu">
             <ul>
+                <li> <i class="fa-regular fa-search"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
                 <li>
-                    <a href="Movies.html"> Movies</a>
-                    <a href="In theaters.html"> In Theaters </a>
-                    <a href="Coming Soon.html"> Coming Soon</a>
-                    <a href="TV Shows.html"> TV Shows</a>
-                    <a href="./Jar/preVIEW.jar">Download</a>
+                    <a href="Watchlist.html"> <i class="far fa-bookmark"></i> Watchlist</a>
                 </li>
+                <!--Search Bar <script src="./app.js"></script> -->
             </ul>
-            <h1 class="logo"> <img src="./image/logo.svg">
-            </h1>
         </nav>
-    </section>
-    <!--play video-->
-    <div class="container">
-        <div class="popup-video">
-            <span>&times; </span>
-            <video src="./video/logo-video.mp4" autoplay controls></video>
+        <!--end Search Bar-->
+        <div class="square"></div>
+        <section class="homepage">
+            <nav>
+                <h1 class="sliding-text">
+                    Preceding the official trailer
+                    <br> of your favorite movie
+                </h1>
+                <ul>
+                    <li>
+                        <a href="Movies.html"> Movies</a>
+                        <a href="In theaters.html"> In Theaters </a>
+                        <a href="Coming Soon.html"> Coming Soon</a>
+                        <a href="TV Shows.html"> TV Shows</a>
+                        <a href="./Jar/preVIEW.jar">Download</a>
+                    </li>
+                </ul>
+                <h1 class="logo">
+                    <img src="./image/logo.svg">
+                </h1>
+            </nav>
+        </section>
+        <!--play video-->
+        <div class="container">
+            <div class="popup-video">
+                <span>&times; </span>
+                <video src="./video/logo-video.mp4" autoplay controls></video>
 
+            </div>
         </div>
-    </div>
-    <!--end play video-->
+        <!--end play video-->
+        <!--start Top Picks-->
+        <div class="movie-container">
+            <h3>Top picks</h3>
+            <p>TV shows and movies just for you</p>
 
-    <!--start Top Picks-->
-    <div class="movie-container">
-        <h3>Top picks</h3>
-        <p>TV shows and movies just for you</p>
+            <div class="video-container">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/loki.mp4" muted></video></div>
+                    <h4><b>Loki (2021)</b></h4>
+                    <p>TV Series &#183; 2021 &#183; TV-14 </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9140554" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Loki (2021) on IMDb" />
+                    </span>
+                </div>
 
-        <div class="video-container">
-            <div class="movie-title">
-                <div class="video"><video src="./video/loki.mp4" muted></video></div>
-                <h4><b>Loki (2021)</b></h4>
-                <p>TV Series &#183; 2021 &#183; TV-14 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9140554" data-style="p1">        
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Loki (2021) on IMDb" /> 
-                </span>
-            </div>
-
-            <div class="movie-title">
-                <div class="video"><video src="./video/the wheel of time.mp4" muted></video></div>
-                <h4><b>The Wheel of Time</b></h4>
-                <p>TV Series &#183; 2021 &#183; TV-14 &#183; 1h </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt7462410" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt="The Wheel of Time (2021) on IMDb" />    
-                </span>
-            </div>
-            <div class="movie-title">
-                <div class="video"><video src="./video/Free guy.mp4" muted></video></div>
-                <h4><b>Free Guy (2021)</b></h4>
-                <p>2021 &#183; PG-13 &#183; 1h55m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt6264654" data-style="p1">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/the wheel of time.mp4" muted></video></div>
+                    <h4><b>The Wheel of Time</b></h4>
+                    <p>TV Series &#183; 2021 &#183; TV-14 &#183; 1h </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt7462410" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt="The Wheel of Time (2021) on IMDb" />
+                    </span>
+                </div>
+                <div class="movie-title">
+                    <div class="video"><video src="./video/Free guy.mp4" muted></video></div>
+                    <h4><b>Free Guy (2021)</b></h4>
+                    <p>2021 &#183; PG-13 &#183; 1h55m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt6264654" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Free Guy (2021) on IMDb" />
-                </span>
-            </div>
-            <div class="movie-title">
-                <div class="video"><video src="./video/wandaVision.mp4" muted></video></div>
-                <h4><b>WandaVision (2021)</b></h4>
-                <p>TV Mini Series &#183; 2021 &#183; TV-PG &#183; 5h 50m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9140560" data-style="p1">
+                    </span>
+                </div>
+                <div class="movie-title">
+                    <div class="video"><video src="./video/wandaVision.mp4" muted></video></div>
+                    <h4><b>WandaVision (2021)</b></h4>
+                    <p>TV Mini Series &#183; 2021 &#183; TV-PG &#183; 5h 50m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9140560" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" WandaVision (2021) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/Jungle Cruise.mp4" muted></video></div>
-                <h4><b> Jungle Cruise (2021) </b></h4>
-                <p>2021 &#183; PG-13 &#183; 2h07m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0870154" data-style="p1">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/Jungle Cruise.mp4" muted></video></div>
+                    <h4><b> Jungle Cruise (2021) </b></h4>
+                    <p>2021 &#183; PG-13 &#183; 2h07m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0870154" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Jungle Cruise (2021) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/The Witcher Nightmare of the Wolf.mp4" muted></video></div>
-                <h4><b>The Witcher Nightmare of the Wolf</b></h4>
-                <p>2021 &#183; TV-MA &#183; 1h23m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11657662" data-style="p1">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/The Witcher Nightmare of the Wolf.mp4" muted></video></div>
+                    <h4><b>The Witcher Nightmare of the Wolf</b></h4>
+                    <p>2021 &#183; TV-MA &#183; 1h23m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11657662" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The Witcher: Nightmare of the Wolf (2021) on IMDb" />
-                </span>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-    <!--start Fan Favorite-->
-    <div class="movie-container">
-        <div><i class="fas fa-star"></i>
-            <h3>Fan favorites</h3>
-        </div>
-        <p>This week's top TV and movies</p>
+        <!--start Fan Favorite-->
+        <div class="movie-container">
+            <div>
+                <i class="fas fa-star"></i>
+                <h3>Fan favorites</h3>
+            </div>
+            <p>This week's top TV and movies</p>
 
-        <div class="video-container">
-            <div class="movie-title">
-                <div class="video"><video src="./video/SpiderMan- No Way Home.mp4" muted></video></div>
-                <h4><b>Spider-Man: No Way Home</b></h4>
-                <p>2021 &#183; PG-13 &#183; 2h28m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872600" data-style="p1">
+            <div class="video-container">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/SpiderMan- No Way Home.mp4" muted></video></div>
+                    <h4><b>Spider-Man: No Way Home</b></h4>
+                    <p>2021 &#183; PG-13 &#183; 2h28m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872600" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/witcher.mp4" muted></video></div>
-                <h4><b>The Witcher</b></h4>
-                <p>TV Series &#183; 2019 &#183; TV-MA &#183; 1h </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt5180504" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Witcher (2021) on IMDb" />               
-                </span>
-            </div>
+                <div class="movie-title">
+                    <div class="video"><video src="./video/witcher.mp4" muted></video></div>
+                    <h4><b>The Witcher</b></h4>
+                    <p>TV Series &#183; 2019 &#183; TV-MA &#183; 1h </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt5180504" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Witcher (2021) on IMDb" />
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/NoTimetoDie.mp4" muted></video></div>
-                <h4><b>No Time To Die</b></h4>
-                <p>2021 &#183; PG-13 &#183; 2h43m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2382320" data-style="p1">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/NoTimetoDie.mp4" muted></video></div>
+                    <h4><b>No Time To Die</b></h4>
+                    <p>2021 &#183; PG-13 &#183; 2h43m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2382320" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/Arcane.mp4" muted></video></div>
-                <h4><b>Arcane</b></h4>
-                <p>TV Series &#183; 2021 &#183; TV-14 &#183; 41m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11126994" data-style="p1">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/Arcane.mp4" muted></video></div>
+                    <h4><b>Arcane</b></h4>
+                    <p>TV Series &#183; 2021 &#183; TV-14 &#183; 41m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11126994" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/Shangchi.mp4" muted></video></div>
-                <h4><b>Shang-Chi and the Legend of the Ten Rings</b></h4>
+                <div class="movie-title">
+                    <div class="video"><video src="./video/Shangchi.mp4" muted></video></div>
+                    <h4><b>Shang-Chi and the Legend of the Ten Rings</b></h4>
 
-                <p> 2021 &#183; PG-13 &#183; 2h12m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376612" data-style="p1">
+                    <p> 2021 &#183; PG-13 &#183; 2h12m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376612" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
-            <div class="movie-title">
-                <div class="video"><video src="./video/Dune trailer.mp4" muted></video></div>
-                <h4><b>Dune</b></h4>
-                <p>2021 &#183; PG-13 &#183; 2h35m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt1160419" data-style="p1">
+                <div class="movie-title">
+                    <div class="video"><video src="./video/Dune trailer.mp4" muted></video></div>
+                    <h4><b>Dune</b></h4>
+                    <p>2021 &#183; PG-13 &#183; 2h35m </p>
+                    <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt1160419" data-style="p1">
                         <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
-                </span>
-            </div>
+                    </span>
+                </div>
 
+            </div>
+            <div class="popup-video">
+                <span>&times; </span>
+                <video src="./video/Arcane.mp4" muted autoplay controls></video>
+
+            </div>
         </div>
-        <div class="popup-video">
-            <span>&times; </span>
-            <video src="./video/Arcane.mp4" muted autoplay controls></video>
+        <!--end Fan Favorite-->
+        <!--Get IMDB RATE-->
+        <script>
+            (function (d, s, id) {
+                var js, stags = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                stags.parentNode.insertBefore(js, stags);
+            })(document, "script", "imdb-rating-api");
+        </script>
 
-        </div>
-    </div>
-    <!--end Fan Favorite-->
-    <!--Get IMDB RATE-->
-    <script>
-        (function(d, s, id) {
-            var js, stags = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
+        <!--Script for popup video-->
+        <script>
+            document.querySelectorAll('.video-container video').forEach(vid => {
+                vid.onclick = () => {
+                    document.querySelector('.popup-video').style.display = 'block';
+                    document.querySelector('.popup-video video').src = vid.getAttribute('src')
+                }
+
+            });
+
+            document.querySelector('.popup-video span').onclick = () => {
+                document.querySelector('.popup-video').style.display = 'none';
             }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
-            stags.parentNode.insertBefore(js, stags);
-        })(document, "script", "imdb-rating-api");
-    </script>
-
-    <!--Script for popup video-->
-    <script>
-        document.querySelectorAll('.video-container video').forEach(vid => {
-            vid.onclick = () => {
-                document.querySelector('.popup-video').style.display = 'block';
-                document.querySelector('.popup-video video').src = vid.getAttribute('src')
-            }
-
-        });
-
-        document.querySelector('.popup-video span').onclick = () => {
-            document.querySelector('.popup-video').style.display = 'none';
-        }
-    </script>
+        </script>
 
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
 </body>
 
 <footer class="footer">
