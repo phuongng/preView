@@ -14,117 +14,103 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-    
+
     <title>preView </title>
 </head>
 
 <body>
-    <!--  login and sign up buttons-->
-
-    <ul>
-        <li>
-            <button onclick="document.getElementById('login').style.display='block'" style="width:100px;">Login</button>
-
-            <div id="login" class="modal">
-
-                <form class="modal-content animate" action="./signed-in-index.html" method="post" style="height: 50%; width: 30%">
-                    <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-                    <div class="container" style="">
-                        <h1>Login</h1>
-                        <p>Enter your username and password below...</p>
-                        <label for="email"><b>Email: </b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
-                        <br />
-                        <label for="psw"><b>Password: </b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required>
-
-                        <button type="submit">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember Me
-                        </label>
-                    </div>
-
-                    <div class="container" style="background-color:#f1f1f1">
-
-                        <button type="button" class="cancelbtn" onclick="document.getElementById('login').style.display='none'">Cancel</button>
-
-                    </div>
-                    <div class="container">
-
-                        <p>Don't have an account ?</p>
-                        <button type="button" onclick="document.getElementById('signup').style.display = 'block'; document.getElementById('login').style.display='none'" class="signupbtn" style="background-color:#800080">Sign Up</button>
-
-                    </div>
-                </form>
-            </div>
-        </li>
-
-
-
-
-
-        <li>
-            <button onclick="document.getElementById('signup').style.display='block'" style="width:100px; background-color:#800080;">Sign Up</button>
-
-            <div id="signup" class="modal">
-                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <form class="modal-content animate" action="./signed-in-index.html" method="post" style="height: 50%; width: 30%">
-                    <div class="container">
-                        <h1>Sign Up</h1>
-                        <p>Please fill in this form to create an account.</p>
-
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
-                        <br />
-
-                        <label for="password"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" id="password" oninput="validatePassword()" required>
-                        <br />
-
-                        <label for="confirm_password"><b>Confirm</b></label>
-                        <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" oninput="validatePassword()" required>
-
-                        <script language="javascript" type="text/javascript">
-                            function validatePassword() {
-                                if (getElementById("password").value != document.getElementById("confirm_password").value) {
-                                    alert("Passwords Don't Match");
-                                }
-                            }
-
-                            password.onchange = validatePassword;
-                            confirm_password.onkeyup = validatePassword;
-                        </script>
-
-                        <div class="container" style="background-color:#f1f1f1">
-
-                            <button type="button" class="cancelbtn" onclick="document.getElementById('signup').style.display='none'">Cancel</button>
-
-                        </div>
-                        <div class="clearfix">
-
-                            <button type="submit" class="signupbtn">Create Account</button>
-
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </li>
-    </ul>
-
-
-
-
-
-
     <!--Search Bar-->
     <nav class="top-menu">
         <ul>
             <li> <i class="fa-regular fa-search"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
-            <li>
-                <a href="Watchlist.html"> <i class="far fa-bookmark"></i> Watchlist</a>
-            </li>
             <!--Search Bar <script src="./app.js"></script> -->
+
+            <!--  login and sign up buttons-->
+            <li>
+                <a onfoucs="cursor: pointer" onclick="document.getElementById('login').style.display='block'" style="width:100px;">Login</a>
+
+                <div id="login" class="modal">
+
+                    <form class="modal-content animate" action="./index.html" method="post" style="height: 50%; width: 30%">
+                        <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                        <div class="container" style="">
+                            <h1>Login</h1>
+                            <p>Enter your username and password below...</p>
+                            <label for="email"><b>Email: </b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <br />
+                            <label for="psw"><b>Password: </b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember Me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+
+                            <button type="button" class="cancelbtn" onclick="document.getElementById('login').style.display='none'">Cancel</button>
+
+                        </div>
+                        <div class="container">
+
+                            <p>Don't have an account ?</p>
+                            <button type="button" onclick="document.getElementById('signup').style.display = 'block'; document.getElementById('login').style.display='none'" class="signupbtn" style="background-color: black; color: white;">Sign Up</button>
+
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+            <li>
+                <a onfocus="cursor: pointer" onclick="document.getElementById('signup').style.display='block'">Sign Up</a>
+
+                <div id="signup" class="modal">
+                    <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content animate" action="./index.html" method="post" style="height: 50%; width: 30%">
+                        <div class="container">
+                            <h1>Sign Up</h1>
+                            <p>Please fill in this form to create an account.</p>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <br />
+
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" id="password" oninput="validatePassword()" required>
+                            <br />
+
+                            <label for="confirm_password"><b>Confirm</b></label>
+                            <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" oninput="validatePassword()" required>
+
+                            <script language="javascript" type="text/javascript">
+                                function validatePassword() {
+                                    if (getElementById("password").value != document.getElementById("confirm_password").value) {
+                                        alert("Passwords Don't Match");
+                                    }
+                                }
+
+                                password.onchange = validatePassword;
+                                confirm_password.onkeyup = validatePassword;
+                            </script>
+
+                            <div class="container" style="background-color:#f1f1f1">
+
+                                <button type="button" class="cancelbtn" onclick="document.getElementById('signup').style.display='none'">Cancel</button>
+
+                            </div>
+                            <div class="clearfix">
+
+                                <button type="submit" class="signupbtn">Create Account</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- end login/signup -->
         </ul>
     </nav>
     <!--end Search Bar-->
@@ -291,7 +277,7 @@
     <!--end Fan Favorite-->
     <!--Get IMDB RATE-->
     <script>
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, stags = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) {
                 return;

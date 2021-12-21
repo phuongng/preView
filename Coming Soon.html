@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Slideshow.css">
     <link rel="stylesheet" href="fontawesome.css">
     <link rel="stylesheet" href="searchbar.css">
+    <link rel="stylesheet" href="modal-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" crossorigin="anonymous">
@@ -22,14 +23,98 @@
     <nav class="top-menu">
         <ul>
             <li> <i class="fa-regular fa-search"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
-            <li>
-                <a href="Watchlist.html"> <i class="far fa-bookmark"></i> Watchlist</a>
-            </li>
-            <li><a href="Sign In.html"> Sign In</a></li>
             <!--Search Bar <script src="./app.js"></script> -->
+
+            <!--  login and sign up buttons-->
+            <li>
+                <a onfoucs="cursor: pointer" onclick="document.getElementById('login').style.display='block'" style="width:100px;">Login</a>
+
+                <div id="login" class="modal">
+
+                    <form class="modal-content animate" action="./index.html" method="post" style="height: 50%; width: 30%">
+                        <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                        <div class="container">
+                            <h1>Login</h1>
+                            <p>Enter your username and password below...</p>
+                            <label for="email"><b>Email: </b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <br />
+                            <label for="psw"><b>Password: </b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember Me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+
+                            <button type="button" class="cancelbtn" onclick="document.getElementById('login').style.display='none'">Cancel</button>
+
+                        </div>
+                        <div class="container">
+
+                            <p>Don't have an account ?</p>
+                            <button type="button" onclick="document.getElementById('signup').style.display = 'block'; document.getElementById('login').style.display='none'" class="signupbtn" style="background-color: black; color: white;">Sign Up</button>
+
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+            <li>
+                <a onfocus="cursor: pointer" onclick="document.getElementById('signup').style.display='block'">Sign Up</a>
+
+                <div id="signup" class="modal">
+                    <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content animate" action="./index.html" method="post" style="height: 50%; width: 30%">
+                        <div class="container">
+                            <h1>Sign Up</h1>
+                            <p>Please fill in this form to create an account.</p>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <br />
+
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" id="password" oninput="validatePassword()" required>
+                            <br />
+
+                            <label for="confirm_password"><b>Confirm</b></label>
+                            <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" oninput="validatePassword()" required>
+
+                            <script language="javascript" type="text/javascript">
+                                function validatePassword() {
+                                    if (getElementById("password").value != document.getElementById("confirm_password").value) {
+                                        alert("Passwords Don't Match");
+                                    }
+                                }
+
+                                password.onchange = validatePassword;
+                                confirm_password.onkeyup = validatePassword;
+                            </script>
+
+                            <div class="container" style="background-color:#f1f1f1">
+
+                                <button type="button" class="cancelbtn" onclick="document.getElementById('signup').style.display='none'">Cancel</button>
+
+                            </div>
+                            <div class="clearfix">
+
+                                <button type="submit" class="signupbtn">Create Account</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- end login/signup -->
         </ul>
     </nav>
     <!--end Search Bar-->
+    <div class="square"></div>
 
     <section>
         <nav>
@@ -103,8 +188,8 @@
                 <div class="video"><video src="./video/Cyrano.mp4" muted></video></div>
                 <h4><b>Cyrano</b></h4>
                 <p>2021 &#183; PG &#183; 2h04m </p>
-                <div class="imdbRatingPlugin" data-user="ur144175790" data-title="tt6264654" data-style="p1">
-                    <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <div class="imdbRatingPlugin" data-user="ur144175790" data-title="tt12889404" data-style="p1">
+                    <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Cyrano (2021) on IMDb" />
                 </div>
             </div>
 
@@ -112,24 +197,24 @@
                 <div class="video"><video src="./video/The 355.mp4" muted></video></div>
                 <h4><b>The 355</b></h4>
                 <p>2022 &#183; PG-13 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872603" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt8356942" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The 355 (2022) on IMDb" />
                 </span>
             </div>
             <div class="movie-title">
                 <div class="video"><video src="./video/Jackass Forever.mp4" muted></video></div>
                 <h4><b>Jackass Forever</b></h4>
                 <p>2022 &#183; R &#183; 1h36m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt108726003" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11466222" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Jackass Forever (2022) on IMDb" />
                 </span>
             </div>
             <div class="movie-title">
                 <div class="video"><video src="./video/  Moonfall (2022).mp4" muted></video></div>
                 <h4><b>Moonfall</b></h4>
                 <p>2022 &#183; 2h </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872604" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt5834426" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Moonfall (2022) on IMDb" />
                 </span>
             </div>
 
@@ -137,8 +222,8 @@
                 <div class="video"><video src="./video/  Operation Fortune- Ruse de guerre (2022).mp4" muted></video></div>
                 <h4><b> Operation Fortune: Ruse de guerre </b></h4>
                 <p>2022 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt7985704" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Operation Fortune: Ruse de guerre (2022) on IMDb" />
                 </span>
             </div>
 
@@ -146,8 +231,8 @@
                 <div class="video"><video src="./video/Belle.mp4" muted></video></div>
                 <h4><b>Belle</b></h4>
                 <p>2021 &#183; PG &#183; 2h01m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="0tt10872606" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt13651628" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Belle (2021) on IMDb" />
                 </span>
             </div>
 
@@ -155,8 +240,8 @@
                 <div class="video"><video src="./video/Death on the Nile.mp4" muted></video></div>
                 <h4><b> Death on the Nile</b></h4>
                 <p>2022 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt7657566" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Death on the Nile (2022) on IMDb" />
                 </span>
             </div>
 
@@ -164,8 +249,8 @@
                 <div class="video"><video src="./video/Redeeming Love.mp4" muted></video></div>
                 <h4><b> Redeeming Love </b></h4>
                 <p>2021 &#183; PG-13 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11365186" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Redeeming Love (2022) on IMDb" />
                 </span>
             </div>
 
@@ -173,8 +258,8 @@
                 <div class="video"><video src="./video/Sesame Street.mp4" muted></video></div>
                 <h4><b> Sesame Street </b></h4>
                 <p>2022 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2224162" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Sesame Street (2022) on IMDb" />
                 </span>
             </div>
 
@@ -182,8 +267,8 @@
                 <div class="video"><video src="./video/The King's Daughter.mp4" muted></video></div>
                 <h4><b>The King's Daughter</b></h4>
                 <p>2022 &#183; PG &#183; 1h30m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt9376613" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2328678" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" The King's Daughter (2022) on IMDb" />
                 </span>
             </div>
 
@@ -191,8 +276,8 @@
                 <div class="video"><video src="./video/Dog.mp4" muted></video></div>
                 <h4><b>Dog</b></h4>
                 <p>2022 &#183; PG-13 &#183; 1h30m </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2382320" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt11252248" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Dog (2022) on IMDb" />
                 </span>
             </div>
 
@@ -200,8 +285,8 @@
                 <div class="video"><video src="./video/  Uncharted.mp4" muted></video></div>
                 <h4><b>Uncharted</b></h4>
                 <p>2022 </p>
-                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt10872600" data-style="p1">
-                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt1464335" data-style="p1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Uncharted (2022) on IMDb" />
                 </span>
             </div>
 
