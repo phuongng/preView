@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome.css">
     <link rel="stylesheet" href="searchbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
     <title>preView </title>
 </head>
 
@@ -49,10 +52,105 @@
     <div class="container">
         <div class="popup-video">
             <span>&times; </span>
-            <video src="./image/logo-video.mp4" autoplay controls></video>
+            <video src="./video/logo-video.mp4" autoplay controls></video>
 
         </div>
     </div>
+    <!--end play video-->
+
+
+
+    <!--start Fan Favorite-->
+    <div class="movie-container">
+        <div><i class="fas fa-star"></i>
+            <h3>Fan favorites</h3>
+        </div>
+        <p>This week'stop TV and movies</p>
+
+        <div class="video-container">
+            <div class="movie-title">
+                <div class="video"><video src="./video/SpiderMan- No Way Home.mp4" muted></video></div>
+                <h4><b>Spider-Man: No Way Home</b></h4>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0903747" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt10872600/?ref_=hm_inth_tt_t_1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Spider-Man No Way Home (2021) on IMDb" />
+                    </a>
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/witcher.mp4" muted></video></div>
+                <h4><b>The Witcher</b></h4>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt1586680" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt5180504/?ref_=hm_fanfav_tt_t_9_pd_fp1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Witcher (2021) on IMDb" />
+                    </a>                
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/NoTimetoDie.mp4" muted></video></div>
+                <h4><b>No Time To Die</b></h4>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0472954" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt2382320/?ref_=hm_fanfav_tt_i_11_pd_fp1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
+                    </a>
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Arcane.mp4" muted></video></div>
+                <h4><b>Arcane</b></h4>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0472964" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt11126994/?ref_=hm_fanfav_tt_t_5_pd_fp1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
+                    </a>
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Shangchi.mp4" muted></video></div>
+                <h4><b>Shang-Chi and the Legend of the Ten Rings</b></h4>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt2442560" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt9376612/?ref_=nv_sr_srsg_0">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
+                    </a>
+                </span>
+            </div>
+
+            <div class="movie-title">
+                <div class="video"><video src="./video/Dune trailer.mp4" muted></video></div>
+                <h4><b>Dune</b></h4>
+                <span class="imdbRatingPlugin" data-user="ur144175790" data-title="tt0386676" data-style="p1">
+                    <a href="https://www.imdb.com/title/tt1160419/?ref_=fn_al_tt_1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" alt=" Breaking Bad (2008) on IMDb" />
+                    </a>
+                </span>
+            </div>
+
+        </div>
+        <div class="popup-video">
+            <span>&times; </span>
+            <video src="./video/Arcane.mp4" muted autoplay controls></video>
+
+        </div>
+    </div>
+    <!--end Fan Favorite-->
+    <!--Get IMDB RATE-->
+    <script>
+        (function(d, s, id) {
+            var js, stags = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+            stags.parentNode.insertBefore(js, stags);
+        })(document, "script", "imdb-rating-api");
+    </script>
+
+    <!--Script for popup video-->
     <script>
         document.querySelectorAll('.video-container video').forEach(vid => {
             vid.onclick = () => {
@@ -66,7 +164,9 @@
             document.querySelector('.popup-video').style.display = 'none';
         }
     </script>
-    <!--end play video-->
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous"></script>
