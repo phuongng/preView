@@ -68,6 +68,11 @@ a.hover-text:active {
     color: rgb(230, 230, 33);
 }
 
+a.hover:hover,
+a.hover:active {
+    color: rgb(230, 230, 33);
+}
+
 
 /* video */
 
