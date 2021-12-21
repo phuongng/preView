@@ -22,6 +22,9 @@ public class preVIEW_GUI extends javax.swing.JFrame {
      */
     protected String genre = " ";
     protected String title = " ";
+    protected boolean field = false;
+    protected boolean combo = false;
+    protected boolean status = false;
     
     public preVIEW_GUI() {
         initComponents();
@@ -63,7 +66,7 @@ public class preVIEW_GUI extends javax.swing.JFrame {
             }
         });
 
-        String[] genre = new String[]{"Animation", "Adventure", "Comedy", "Action", "Sci-Fi", "Crime", "Mystery", "Drama", "Family", "Fantasy", "Music", "Biography"};
+        String[] genre = new String[]{"Pick One","Animation", "Adventure", "Comedy", "Action", "Sci-Fi", "Crime", "Mystery", "Drama", "Family", "Fantasy", "Music", "Biography"};
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(genre));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,15 +145,14 @@ public class preVIEW_GUI extends javax.swing.JFrame {
                             .addComponent(jLabel1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(48, 48, 48)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(13, 13, 13)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -164,7 +166,7 @@ public class preVIEW_GUI extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        title = jTextField1.getText();
+        title = (String) jTextField1.getText();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -176,10 +178,32 @@ public class preVIEW_GUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         jTextField1ActionPerformed(evt);
+       
+        if(title.equals("")){
+            field = false;}
+        
+        if(!title.equals("")){
+            field = true;}
+        
         jComboBox1ActionPerformed(evt);
-        jTextArea1.setText(title+ "\n");
-        jTextArea1.append("All\t" + " | Men\t" + " | Women\t\n");
-        jTextArea1.append(predict(genre));
+        
+        if(genre.equals("Pick One")){
+            combo = false;}
+        if(!genre.equals( "Pick One")){
+            combo = true;}
+        status = field && combo;
+        
+        
+        if(status == true){
+            jTextArea1.setText(title+ "\n");
+            jTextArea1.append("All\t" + " | Men\t" + " | Women\t\n");
+            jTextArea1.append(predict(genre));}
+        if(status == false){
+            jTextArea1.setText("Please enter movie and select genre.");
+            
+        }    
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
     
     /**
