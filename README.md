@@ -1,2 +1,2 @@
 # preView
-A group project of students for the Software Engineer 412 course at Towson University
+This website is a group project made by students for the Software Engineering COSC 412 course at Towson University.

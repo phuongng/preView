@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +22,17 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 
-    <title>preView </title>
+    <title>preVIEW</title>
 </head>
 
 <body>
     <!--Search Bar-->
     <nav class="top-menu">
         <ul>
-            <li> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ..."> </li>
-            <!--Search Bar <script src="./app.js"></script> -->
+            <div class="search">
+                <script async src="https://cse.google.com/cse.js?cx=82cb266ce26ab0d46"></script>
+		        <div class="gcse-search"></div>
+	       </div>
 
             <!--  login and sign up buttons-->
             <li>
@@ -118,8 +127,8 @@
     <section class="homepage">
         <nav>
             <h1 class="sliding-text">
-                Preceding the official trailer
-                <br> of your favorite movie
+                Official trailers
+                <br> of your favorite movies
             </h1>
             <ul>
                 <li>
@@ -127,7 +136,7 @@
                     <a class="hover-text" href="In theaters.html"> In Theaters </a>
                     <a class="hover-text" href="Coming Soon.html"> Coming Soon</a>
                     <a class="hover-text" href="TV Shows.html"> TV Shows</a>
-                    <a class="hover-text" href="./Jar/preVIEW.jar">Download</a>
+                    <a class="hover-text" href="./README.md">About</a>
                 </li>
             </ul>
             <h1 class="logo">
@@ -135,15 +144,6 @@
             </h1>
         </nav>
     </section>
-    <!--play video-->
-    <div class="container">
-        <div class="popup-video">
-            <span>&times; </span>
-            <video src="./video/logo-video.mp4" autoplay controls></video>
-
-        </div>
-    </div>
-    <!--end play video-->
     <!--start Top Picks-->
     <div class="movie-container">
         <h3>Top picks</h3>

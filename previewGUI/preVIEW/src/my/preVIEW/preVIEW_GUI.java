@@ -260,7 +260,7 @@ public class preVIEW_GUI extends javax.swing.JFrame {
   public static String predict(String genre) {
     String output = " ";
     final String ID = "admin";
-    final String PW = "11oveCookie$";
+    final String PW = "35DF!En%znX!";
     final String SERVER = "jdbc:mysql://studentdatabase.c7whb4kqcku6.us-east-1.rds.amazonaws.com:3306/mywebapp";
     String querys;
     try {
