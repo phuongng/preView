@@ -4,39 +4,75 @@
 
 */
 
-body {
-    font-family: Arial, Helvetica, sans - serif;
+.label {
+    position: absolute;
+
 }
+
+.description{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.have-account{
+
+margin-bottom: 1rem;
+}
+
 
 input[type=text],
 input[type=password] {
     width: 75%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 30px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 button {
-    background-color: rgb(230, 230, 33);
+    background-color: #717171;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 75%;
     font-size: 16px;
+    border-radius: 5px;
+    
+}
+.Send-btn{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid rgb(2, 2, 2);
 }
 
-.cancelbtn {
+.Send-btn:hover{
+    background-color: #9b9b9b;
+    font-weight: bold;
+
+}
+.cancel-btn {
     width: auto;
-    padding: 10px 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: #f44336;
+    margin-top: 0;
+    margin-bottom:0;
 }
 
+.signupbtn:hover{
+
+    background-color: #ddd12d;
+}
 .container {
     padding: 16px;
+    align-items: left;
 }
 
 span.psw {
@@ -76,4 +112,12 @@ span.psw {
 
 .close:hover {
     cursor: pointer;
+}
+
+.modal-content animate{
+    display: table;
+    text-align: center;
+    margin-left: 32rem;
+    margin-top: 1rem;
+    width: 40%;
 }
